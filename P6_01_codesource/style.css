@@ -1,158 +1,205 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    align-items: center;
+#body
+{
+    background-color: #abb3b9;
 }
-.entete {
-    background-color: rgb(99, 74, 83);
-    width: 90%;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.title:nth-child(1){
-    flex: 2;
-}
-.welcome:nth-child(2) {
-    flex:1;
+.container
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	align-items: center;
+    border: solid 1px ;
+    border-radius: 20px;
+    background-color: #b8bec5;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.modal {
-    position:fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    /* top: 0;
-    left: 0; */
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.entete
+{
+	background-color: #5c5f63;
+	width: 90%;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #37393b;
 }
 
-.modal-wrapper {
-    display: flex;
-    position: relative;
-    z-index: 3;
-    overflow: auto;
-    width: auto;
-    max-width: calc(100vw - 100px);
-    max-height: calc(100vh - 20px);
-    background-color: white;
-}
-.film-du-moment {
-    border: 2px solid black;
-    width: 90%;
-    margin: 5%;
-    display: flex;
-    justify-content: space-around;
-}
-#left_part {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}
-#movie_of_the_moment_title {
-    display: flex;
-    justify-content: center;
-    height: 90%;
-}
-#best_movie_short_description {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    height: 100%;
-    width: 50%;
-}
-#best_movie_short_description:hover {
-    font-weight: bold;
-    cursor: pointer;
+.title:nth-child(1)
+{
+	flex: 2;
 }
 
-#sectionHeaders {
-    font-weight: bold;
+.welcome:nth-child(2)
+{
+	flex:1;
 }
 
-.movie1Picture, .movie2Picture, .movie3Picture, .movie4Picture, .movie5Picture, .movie6Picture, .movie7Picture {
-    height: 100%;
-    width:  100%;
+.modal
+{
+	position:fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	width: 100%;
+	height: 101%;
+	background: rgba(0, 0, 0, 0.5);
 }
-.arrow {
-    height: 10%;
-    width: 10%;
+
+.modalWrapper
+{
+	display: flex;
+	position: relative;
+	z-index: 100;
+	overflow: auto;
+	width: auto;
+	max-width: calc(100vw - 100px);
+	max-height: calc(100vh - 20px);
+	background-color: white;
 }
-.movie_1, .movie_2, .movie_3, .movie_4, .movie_5, .movie_6, .movie_7  {
-    display: flex;
-    border: 1px solid black;
-    margin: 1%;
-    transition: transform 0.3s;
-}
-.movie_1:hover, .movie_2:hover, .movie_3:hover, .movie_4:hover, .movie_5:hover, .movie_6:hover, .movie_7:hover   {
-    transform: scale(1.1);
-    z-index: 2;
-    cursor: pointer;
-    position: -webkit-sticky;
-    position: sticky;
-}
-.movie1Title, .movie2Title, .movie3Title, .movie4Title, .movie5Title, .movie6Title, .movie7Title {
-    position: absolute;
-    top: 0px;
-    font-size: larger;
-    font-weight:800;
-    color: white;
-} 
-.carousel {
-    position: relative;
-    overflow: hidden;
-}
-.carousel__container {
-    transition: transform 0.3s;
-    position: relative;
-}
-.carousel__container::after {
-    content: '';
-    clear: both;
-    display: table;
+
+#movieOfTheMoment
+{
+	border: 2px solid black;
+	width: 90%;
+	margin: 5%;
+	display: flex;
+	justify-content: space-around;
     
 }
 
-.carousel__item {
-    float: left;
+#leftPart
+{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 }
 
-.carousel__next{
-    position: absolute;
-    height: 10%;
-    width: 3%;  
-    z-index: 4;
-    background: #FFF url(fleche_droite.svg) center center no-repeat;
-    border-radius: 50%;
-    right: 10px;
-    background-size: 50% 50%;
-    top: 50%;
-    transition: transform 0.3s;
-    cursor: pointer;
+#movieOfTheMomentTitle
+{
+	display: flex;
+	justify-content: center;
+	height: 90%;
 }
 
-.carousel__prev {
-    position: absolute;
-    height: 10%;
-    width: 3%; 
-    z-index: 4;
-    background: #FFF url(fleche_gauche.svg) center center no-repeat;
+#bestMovieShortDescription
+{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	height: 100%;
+	width: 50%;
+}
+
+#bestMovieShortDescription:hover
+{
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.sectionHeaders
+{
+	font-weight: bold;
+}
+
+.moviePicture
+{
+	height: 100%;
+	width:  100%;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px #37393b;
+}
+
+.arrow
+{
+	height: 10%;
+	width: 10%;
+}
+
+.movieItem
+{
+	display: flex;
+	border: 1px solid black;
+	margin: 1%;
+	transition: transform 0.3s;
     border-radius: 100%;
-    left: 10px;
-    background-size: 50% 50%;
-    top: 50%;
-    cursor: pointer;
-    transition: transform 0.3s;
 }
 
-.carousel__prev:hover, .carousel__next:hover {
-    transform: scale(1.2);
+.movieItem:hover
+{
+	transform: scale(1.04);
+	z-index: 2;
+	cursor: pointer;
+}
+
+.movieTitle
+{
+	position: absolute;
+	top: 0px;
+	font-size: larger;
+	font-weight:800;
+	color: white;
+}
+
+.carousel
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.carouselContainer
+{
+	transition: transform 0.3s;
+	position: relative;
+}
+
+.carouselContainer::after
+{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.carouselItem
+{
+	float: left;
+}
+
+.carouselNext
+{
+	position: absolute;
+	height: 10%;
+	width: 3%;
+	z-index: 4;
+	background: #FFF url(fleche_droite.svg) center center no-repeat;
+	border-radius: 50%;
+	right: 10px;
+	background-size: 50% 50%;
+	top: 50%;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.carouselPrev
+{
+	position: absolute;
+	height: 10%;
+	width: 3%;
+	z-index: 4;
+	background: #FFF url(fleche_gauche.svg) center center no-repeat;
+	border-radius: 100%;
+	left: 10px;
+	background-size: 50% 50%;
+	top: 50%;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.carouselPrev:hover, .carouselNext:hover
+{
+	transform: scale(1.2);
 }

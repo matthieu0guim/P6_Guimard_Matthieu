@@ -1,6 +1,10 @@
 let modal = null;
+let movieModal = document.getElementById('movieModal')
+movieModal.style.display = 'none'
+
 const openModal = function (e) {
   console.log("coucou");
+  
   e.preventDefault();
   const target = document.querySelector(e.target.getAttribute("href"));
   console.log(e.target.getAttribute("href"))
@@ -9,9 +13,9 @@ const openModal = function (e) {
   target.setAttribute("aria-modal", "true");
   modal = target;
   modal.addEventListener("click", closeModal);
-  modal.querySelector(".js-modal-close").addEventListener("click", closeModal);
+  modal.querySelector(".jsModalClose").addEventListener("click", closeModal);
   modal
-    .querySelector(".js-modal-stop")
+    .querySelector(".jsModalStop")
     .addEventListener("click", stopPropagation);
 };
 
@@ -20,19 +24,19 @@ const closeModal = function (e) {
     return;
   }
   e.preventDefault();
-  let movieModal = document.getElementById("modal-wrapper-id");
-  let texte = document.querySelector("aside .modal-wrapper > p");
-  let image = document.querySelector("aside .modal-wrapper > img");
+  let movieModal = document.getElementById("modalWrapperId");
+  let texte = document.querySelector("aside .modalWrapper > p");
+  let image = document.querySelector("aside .modalWrapper > img");
   modal.style.display = "none";
   modal.setAttribute("aria-hidden", "true");
   modal.setAttribute("id", "movieModal");
   modal.removeAttribute("aria-modal");
   modal.removeEventListener("click", closeModal);
   modal
-    .querySelector(".js-modal-close")
+    .querySelector(".jsModalClose")
     .removeEventListener("click", closeModal);
   modal
-    .querySelector(".js-modal-stop")
+    .querySelector(".jsModalStop")
     .removeEventListener("click", stopPropagation);
   movieModal.removeChild(texte);
   movieModal.removeChild(image);
@@ -50,7 +54,7 @@ const getInfo = async function (url) {
   
   let response = await fetch(url);
   let Data = await response.json(); 
-  console.log(Data)
+  // console.log(Data)
   let completeGenre = Data.genres
   longDescription.innerHTML = ` <h2>${Data.title}</h2> <br/> <br/>
                                 Genre:${completeGenre.join()} <br/> <br/>
@@ -85,7 +89,7 @@ for (let movie of liste) {
 
   movie.addEventListener("click", function (event) {
     event.currentTarget.children[1].setAttribute("href", "#movieModal");
-    const modalWrapper = document.getElementById('modal-wrapper-id')
+    const modalWrapper = document.getElementById('modalWrapperId')
     const link = event.currentTarget.children[1].getAttribute("Data");
     const description = document.createElement("p");
     description.setAttribute("id", link + "__description");
@@ -97,10 +101,12 @@ for (let movie of liste) {
     openModal(event);
   });
 }
-const bestMovieDiv = document.getElementById("movie_of_the_moment");
+const bestMovieDiv = document.getElementById("movieOfTheMoment");
+
+
 bestMovieDiv.addEventListener("click", function (event) {
-  event.originalTarget.setAttribute("href", "#movieModal");
-  const modalWrapper = document.getElementById('modal-wrapper-id');
+  event.currentTarget.setAttribute("href", "#movieModal");
+  const modalWrapper = document.getElementById('modalWrapperId');
   console.log(modalWrapper)
   const link = event.currentTarget.children[1].getAttribute("Data");
   const description = document.createElement("p");
@@ -110,7 +116,6 @@ bestMovieDiv.addEventListener("click", function (event) {
   modalWrapper.appendChild(description);
   modalWrapper.appendChild(image);
   getInfo(link);
-  
-  
+
   openModal(event);
 });

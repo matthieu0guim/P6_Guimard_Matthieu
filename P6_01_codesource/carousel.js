@@ -10,11 +10,11 @@ class Carousel {
         this.currentItem = 0
         let ratio = children.length / this.options.slidesVisible
         this.root = this.createDivWithClass('carousel')
-        this.container = this.createDivWithClass('carousel__container')
+        this.container = this.createDivWithClass('carouselContainer')
         this.root.appendChild(this.container)
         this.element.appendChild(this.root) 
         this.items = children.map((child) => {
-            let item = this.createDivWithClass('carousel__item')
+            let item = this.createDivWithClass('carouselItem')
             item.style.width = ((100 / this.options.slidesVisible) / ratio) + "%"
             item.appendChild(child)
             this.container.appendChild(item)
@@ -32,8 +32,8 @@ class Carousel {
     }
 
     createNavigation () {
-        let nextButton = this.createDivWithClass('carousel__next')
-        let prevButton = this.createDivWithClass('carousel__prev')
+        let nextButton = this.createDivWithClass('carouselNext')
+        let prevButton = this.createDivWithClass('carouselPrev')
         this.root.appendChild(nextButton)
         this.root.appendChild(prevButton)
         nextButton.addEventListener('click', this.next.bind(this))

@@ -1,177 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>netflix</title>
-    <link rel="stylesheet" href="style.css" />
-    
-    <script src="carousel.js" async></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="entete">
-        <h1 id="title">JustStreamIt</h1>
-
-        <h2 id="welcome">Accueil</h2>
-
-        <h2 id="categories">Categories</h2>
-            </div>
-          <aside id="movieModal" class="modal" style="display:none;" aria-hidden="true">
-            <div class="modal-wrapper js-modal-stop" id='modal-wrapper-id'>
-              <button class="js-modal-close">x</button>
-            </div>
-          </aside>
-
-      <section class="film-du-moment" id="movie_of_the_moment">
-        <div id="left_part">
-        <h2 class="movie_of_the_moment_title_c" id="movie_of_the_moment_title" >.</h2>
-        
-        <a href="#movieModal" class="js-modal" id="best_movie_short_description"><p id="best-movie-long-description"></p></a>
-      </div>
-        <img
-          class="movie_of_the_moment_poster_c"
-          src="to"
-          alt=""  
-          id="movie_of_the_moment_poster" 
-        />
-      </section>
-
-      <h1 id="sectionHeaders">Films les mieux notés</h1>
-      <div class="sections carousel" id="bestMovies">
-        <div class="movie_1" id="best_ranked_movie_1">
-          <p class="movie1Title js-modal" id="bestMovies1Title"></p>
-          <img class="movie1Picture js-modal" src="to" alt="movie_1" id="bestMovies1Poster">
-        </div>
-        
-        <div class="movie_2" id="best_ranked_movie_2">
-          <p class="movie2Title" id="bestMovies2Title"></p>
-          <img class="movie2Picture" src="to" alt="movie_2" id="bestMovies2Poster"/>
-        </div>
-        
-        <div class="movie_3" id="best_ranked_movie_3">
-          <p class="movie3Title" id="bestMovies3Title"></p>
-          <img class="movie3Picture" src="to" alt="movie_3" id="bestMovies3Poster"/>
-        </div>
-        <div class="movie_4" id="best_ranked_movie_4">
-          <p class="movie4Title" id="bestMovies4Title"></p>
-          <img class="movie4Picture" src="to" alt="movie_4" id="bestMovies4Poster"/>
-        </div>
-        <div class="movie_5" id="best_ranked_movie_5">
-          <p class="movie5Title" id="bestMovies5Title"></p>
-          <img class="movie5Picture" src="to" alt="movie_5" id="bestMovies5Poster"/>
-        </div>
-        <div class="movie_6" id="best_ranked_movie_6">
-          <p class="movie6Title" id="bestMovies6Title"></p>
-          <img class="movie6Picture" src="to" alt="movie_6" id="bestMovies6Poster"/>
-        </div>
-        <div class="movie_7" id="best_ranked_movie_7">
-          <p class="movie7Title" id="bestMovies7Title"></p>
-          <img class="movie7Picture" src="to" alt="movie_7" id="bestMovies7Poster"/>
-        </div>
-
-      </div>
-      <h1 id="first_categorie">Biographie</h1>
-
-      <div class="sections carousel" id="cat1">
-        <div class="movie_1" id="first_categorie_movie_1">
-          <p class="movie1Title" ></p>
-          <img class="movie1Picture"  src="to" alt="movie_1" />
-        </div>
-        <div class="movie_2" id="first_categorie_movie_2">
-          <p class="movie2Title" ></p>
-          <img class="movie2Picture" src="to" alt="movie_2" />
-        </div>
-        <div class="movie_3" id="first_categorie_movie_3">
-          <p class="movie3Title" ></p>
-          <img class="movie3Picture" src="to" alt="movie_3" />
-        </div>
-        <div class="movie_4" id="first_categorie_movie_4">
-          <p class="movie4Title" ></p>
-          <img class="movie4Picture" src="to" alt="movie_4" />
-        </div>
-        <div class="movie_5" id="first_categorie_movie_5">
-          <p class="movie5Title" ></p>
-          <img class="movie5Picture" src="to" alt="movie_5" />
-        </div>
-        <div class="movie_6" id="first_categorie_movie_6">
-          <p class="movie6Title" ></p>
-          <img class="movie6Picture" src="to" alt="movie_5" />
-        </div>
-        <div class="movie_7" id="first_categorie_movie_7">
-          <p class="movie7Title" ></p>
-          <img class="movie7Picture" src="to" alt="movie_5" />
-        </div>
-        
-      </div>
-
-      <h1 id="second_categorie">Aventures</h1>
-
-      <div class="sections carousel" id="cat2">
-        <div class="movie_1" id="second_categorie_movie_1">
-          <p class="movie1Title"></p>
-          <img class="movie1Picture" src="to" alt="movie_1" />
-        </div>
-        <div class="movie_2" id="second_categorie_movie_2">
-          <p class="movie2Title"></p>
-          <img class="movie2Picture" src="to" alt="movie_2" />
-        </div>
-        <div class="movie_3" id="second_categorie_movie_3">
-          <p class="movie3Title"></p>
-          <img class="movie3Picture" src="to" alt="movie_3" />
-        </div>
-        <div class="movie_4" id="second_categorie_movie_4">
-          <p class="movie4Title"></p>
-          <img class="movie4Picture" src="to" alt="movie_4" />
-        </div>
-        <div class="movie_5" id="second_categorie_movie_5">
-          <p class="movie5Title"></p>
-          <img class="movie5Picture" src="to" alt="movie_5" />
-        </div>
-        <div class="movie_6" id="second_categorie_movie_6">
-          <p class="movie6Title"></p>
-          <img class="movie6Picture" src="to" alt="movie_6" />
-        </div>
-        <div class="movie_7" id="second_categorie_movie_7">
-          <p class="movie7Title"></p>
-          <img class="movie7Picture" src="to" alt="movie_7" />
-        </div>
-      </div>
-
-      <h1 id="third_categorie">Film de guerre</h1>
-
-      <div class="sections carousel" id="cat3">
-        <div class="movie_1" id="third_categorie_movie_1">
-          <p class="movie1Title"></p>
-          <img class="movie1Picture" src="to" alt="movie_1" />
-        </div>
-        <div class="movie_2" id="third_categorie_movie_2">
-          <p class="movie2Title"></p>
-          <img class="movie2Picture" src="to" alt="movie_2" />
-        </div>
-        <div class="movie_3" id="third_categorie_movie_3">
-          <p class="movie3Title"></p>
-          <img class="movie3Picture" src="to" alt="movie_3" />
-        </div>
-        <div class="movie_4" id="third_categorie_movie_4">
-          <p class="movie4Title"></p>
-          <img class="movie4Picture" src="to" alt="movie_4" />
-        </div>
-        <div class="movie_5" id="third_categorie_movie_5">
-          <p class="movie5Title"></p>
-          <img class="movie5Picture" src="to" alt="movie_5" />
-        </div>
-        <div class="movie_6" id="third_categorie_movie_6">
-          <p class="movie6Title"></p>
-          <img class="movie6Picture" src="to" alt="movie_6" />
-        </div>
-        <div class="movie_7" id="third_categorie_movie_7">
-          <p class="movie7Title"></p>
-          <img class="movie7Picture" src="to" alt="movie_7" />
-        </div>
-      </div>
-    </div>
-    <script src="main.js"></script>
-    <script src="modal.js"></script>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>netflix</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="carousel.js" async></script>
+	</head>
+	<body id="body">
+		<main class="container">
+			<header class="entete">
+				<h1 id="title">JustStreamIt</h1>
+				<h2 id="welcome">Accueil</h2>
+				<h2 id="categories">Categories</h2>
+      </header>
+			<aside id="movieModal" class="modal"  aria-hidden="true">
+				<div class="modalWrapper jsModalStop" id='modalWrapperId'>
+					<button class="jsModalClose">x</button>
+				</div>
+			</aside>
+			<section class="movieOfTheMoment" id="movieOfTheMoment">
+				<div id="leftPart">
+					<h2  id="movieOfTheMomentTitle" >.</h2>
+					<a href="#movieModal"  id="bestMovieShortDescription"></a>
+				</div>
+				<img src="to" alt=""  />
+			</section>
+			<h1 class="sectionHeader">Films les mieux notés</h1>
+			<section class="sections carousel" id="bestMovies">
+				<article class="movieItem">
+					<p class="movieTitle " id="bestMovies1Title"></p>
+					<img class="moviePicture" src="to" alt="movie_1">
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" id="bestMovies2Title"></p>
+					<img class="moviePicture" src="to" alt="movie_2"/>
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" id="bestMovies3Title"></p>
+					<img class="moviePicture" src="to" alt="movie_3"/>
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" id="bestMovies4Title"></p>
+					<img class="moviePicture" src="to" alt="movie_4"/>
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" id="bestMovies5Title"></p>
+					<img class="moviePicture" src="to" alt="movie_5"/>
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" id="bestMovies6Title"></p>
+					<img class="moviePicture" src="to" alt="movie_6"/>
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" id="bestMovies7Title"></p>
+					<img class="moviePicture" src="to" alt="movie_7"/>
+				</article>
+			</section>
+			<h1 class="sectionHeader">Biographie</h1>
+			<section class="sections carousel" id="cat1">
+				<article class="movieItem" >
+					<p class="movieTitle" ></p>
+					<img class="moviePicture"  src="to" alt="movie_1" />
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle" ></p>
+					<img class="moviePicture" src="to" alt="movie_2" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle" ></p>
+					<img class="moviePicture" src="to" alt="movie_3" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle" ></p>
+					<img class="moviePicture" src="to" alt="movie_4" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle" ></p>
+					<img class="moviePicture" src="to" alt="movie_5" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle" ></p>
+					<img class="moviePicture" src="to" alt="movie_5" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle" ></p>
+					<img class="moviePicture" src="to" alt="movie_5" />
+				</article>
+			</section>
+			<h1 class="sectionHeader">Aventures</h1>
+			<section class="sections carousel" id="cat2">
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_1" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_2" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_3" />
+				</article>
+				<article class="movieItem" >
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_4" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_5" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_6" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_7" />
+				</article>
+			</section>
+			<h1 class="sectionHeader">Film de guerre</h1>
+			<section class="sections carousel" id="cat3">
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_1" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_2" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_3" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_4" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_5" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_6" />
+				</article>
+				<article class="movieItem">
+					<p class="movieTitle"></p>
+					<img class="moviePicture" src="to" alt="movie_7" />
+				</article>
+			</section>
+		</main>
+		<script src="main.js"></script>
+		<script src="modal.js"></script>
+	</body>
 </html>

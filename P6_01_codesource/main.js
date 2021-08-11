@@ -76,7 +76,7 @@ function createAMovie(id = "") {
   };
 }
 
-const movieOfTheMoment = createAMovie("movie_of_the_moment").getURL(
+const movieOfTheMoment = createAMovie("movieOfTheMoment").getURL(
   "bestMovie"
 );
 const bestMovies = createAMovie("bestMovies").getURL("bestMovies");
