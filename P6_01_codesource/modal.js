@@ -72,7 +72,7 @@ const getInfo = async function (url) {
   moviePoster.style.height= "auto"
   moviePoster.style.width= "40%"
 };
-
+const initialisation = function() {
 let children = document.getElementsByClassName("sections");
 var liste = [];
 for (let cat of children) {
@@ -101,8 +101,9 @@ for (let movie of liste) {
     openModal(event);
   });
 }
+}
+initialisation()
 const bestMovieDiv = document.getElementById("movieOfTheMoment");
-
 
 bestMovieDiv.addEventListener("click", function (event) {
   event.currentTarget.setAttribute("href", "#movieModal");
