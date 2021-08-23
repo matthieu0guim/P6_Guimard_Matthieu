@@ -3,11 +3,8 @@ let movieModal = document.getElementById('movieModal')
 movieModal.style.display = 'none'
 
 const openModal = function (e) {
-  console.log("coucou");
-  
   e.preventDefault();
   const target = document.querySelector(e.target.getAttribute("href"));
-  console.log(e.target.getAttribute("href"))
   target.style.display = null;
   target.removeAttribute("aria-hidden");
   target.setAttribute("aria-modal", "true");
@@ -54,7 +51,6 @@ const getInfo = async function (url) {
   
   let response = await fetch(url);
   let Data = await response.json(); 
-  // console.log(Data)
   let completeGenre = Data.genres
   longDescription.innerHTML = ` <h2>${Data.title}</h2> <br/> <br/>
                                 Genre:${completeGenre.join()} <br/> <br/>
@@ -108,7 +104,6 @@ const bestMovieDiv = document.getElementById("movieOfTheMoment");
 bestMovieDiv.addEventListener("click", function (event) {
   event.currentTarget.setAttribute("href", "#movieModal");
   const modalWrapper = document.getElementById('modalWrapperId');
-  console.log(modalWrapper)
   const link = event.currentTarget.children[1].getAttribute("Data");
   const description = document.createElement("p");
   description.setAttribute("id", link + "__description");

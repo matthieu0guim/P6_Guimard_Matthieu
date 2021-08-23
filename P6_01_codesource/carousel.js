@@ -1,4 +1,3 @@
-
 class Carousel {
     constructor (element, options = {}) {
         this.element = element
@@ -12,7 +11,7 @@ class Carousel {
         this.root = this.createDivWithClass('carousel')
         this.container = this.createDivWithClass('carouselContainer')
         this.root.appendChild(this.container)
-        this.element.appendChild(this.root) 
+        this.element.appendChild(this.root)
         this.items = children.map((child) => {
             let item = this.createDivWithClass('carouselItem')
             item.style.width = ((100 / this.options.slidesVisible) / ratio) + "%"
@@ -23,7 +22,6 @@ class Carousel {
         this.setStyle()
         this.createNavigation()
     }
-
 
     setStyle () {
         let ratio = this.items.length / this.options.slidesVisible
@@ -68,7 +66,7 @@ class Carousel {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     new Carousel(document.querySelector('#bestMovies') , {
         slidesToScroll: 1,
         slidesVisible: 4
@@ -83,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesToScroll: 1,
         slidesVisible: 4
     })
+
     new Carousel(document.querySelector('#cat3') , {
         slidesToScroll: 1,
         slidesVisible: 4

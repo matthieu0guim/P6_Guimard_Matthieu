@@ -106,24 +106,15 @@
 	font-weight: bold;
 }
 
-.moviePicture
-{
-	height: 100%;
-	width:  100%;
-    border-radius: 10%;
-    box-shadow: 5px 5px 5px #37393b;
-}
-
 .arrow
 {
-	height: 10%;
-	width: 10%;
+	height: 10px;
+	width: 10px;
 }
 
 .movieItem
 {
 	display: flex;
-	border: 1px solid black;
 	margin: 1%;
 	transition: transform 0.3s;
     border-radius: 100%;
@@ -145,6 +136,14 @@
 	color: white;
 }
 
+.moviePicture
+{
+	height: 100%;
+	width:  100%;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px #37393b;
+}
+
 .carousel
 {
 	position: relative;
@@ -156,13 +155,13 @@
 	transition: transform 0.3s;
 	position: relative;
 }
-
+/* 
 .carouselContainer::after
 {
 	content: '';
 	clear: both;
 	display: table;
-}
+} */
 
 .carouselItem
 {
@@ -178,7 +177,7 @@
 	background: #FFF url(fleche_droite.svg) center center no-repeat;
 	border-radius: 50%;
 	right: 10px;
-	background-size: 50% 50%;
+	background-size: 20px 20px;
 	top: 50%;
 	transition: transform 0.3s;
 	cursor: pointer;

@@ -8,7 +8,6 @@ function createAMovie(id = "") {
       let Data = await response.json();
       let deepResponse = await fetch(Data.results[0].url);
       let deepData = await deepResponse.json();
-      // console.log(section.children[0]);
       section.children[0].children[0].innerHTML = deepData.title;
       section.children[0].children[0].setAttribute('Data', Data.results[0].url)
       section.children[0].children[1].innerHTML = deepData.description;
