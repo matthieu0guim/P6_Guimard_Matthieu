@@ -7,11 +7,12 @@ class Carousel {
         }, options)
         let children = [].slice.call(element.children)
         this.currentItem = 0
-        let ratio = children.length / this.options.slidesVisible
         this.root = this.createDivWithClass('carousel')
         this.container = this.createDivWithClass('carouselContainer')
         this.root.appendChild(this.container)
         this.element.appendChild(this.root)
+        let ratio = children.length / this.options.slidesVisible
+        this.container.style.width = (ratio * 100) + '%'
         this.items = children.map((child) => {
             let item = this.createDivWithClass('carouselItem')
             item.style.width = ((100 / this.options.slidesVisible) / ratio) + "%"
@@ -19,14 +20,7 @@ class Carousel {
             this.container.appendChild(item)
             return item
         });
-        this.setStyle()
         this.createNavigation()
-    }
-
-    setStyle () {
-        let ratio = this.items.length / this.options.slidesVisible
-        this.container.style.width = (ratio * 100) + '%'
-        this.items.forEach(item => item.style.width = ((100 / this.options.slidesVisible) / ratio) + "%");
     }
 
     createNavigation () {

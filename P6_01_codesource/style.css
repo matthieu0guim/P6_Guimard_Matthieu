@@ -155,13 +155,6 @@
 	transition: transform 0.3s;
 	position: relative;
 }
-/* 
-.carouselContainer::after
-{
-	content: '';
-	clear: both;
-	display: table;
-} */
 
 .carouselItem
 {
@@ -201,4 +194,9 @@
 .carouselPrev:hover, .carouselNext:hover
 {
 	transform: scale(1.2);
+}
+
+.toHidde
+{
+	display: none;
 }

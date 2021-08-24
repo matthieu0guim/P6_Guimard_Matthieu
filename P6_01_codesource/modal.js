@@ -73,7 +73,10 @@ let children = document.getElementsByClassName("sections");
 var liste = [];
 for (let cat of children) {
   for (let div of cat.children) {
-    liste.push(div);
+    if (div.classList.contains('movieItem')){
+      liste.push(div);
+    }
+    
   }
 }
 

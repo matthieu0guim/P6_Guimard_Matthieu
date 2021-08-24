@@ -22,10 +22,16 @@ function createAMovie(id = "") {
       let Data = await response.json();
       let i = 0;
       for (let movie of section.children[0].children[0].children) {
+        if (i == 0) {
+          i = i + 1;
+          continue
+        } else {
+          movie.children[0].children[0].innerHTML = Data.results[i-1].title;
+          movie.children[0].children[1].src = Data.results[i-1].image_url;
+          movie.children[0].children[1].setAttribute("data", Data.results[i-1].url);
+        }
         // cet algo permet d'avoir une seule variable en entrée quand celui de main.js doit en avoir 14
-        movie.children[0].children[0].innerHTML = Data.results[i].title;
-        movie.children[0].children[1].src = Data.results[i].image_url;
-        movie.children[0].children[1].setAttribute("data", Data.results[i].url);
+        
         i = i + 1;
       }
     } else if (cat == "Biographie") {
@@ -36,10 +42,16 @@ function createAMovie(id = "") {
       let Data = await response.json();
       let i = 0;
       for (let movie of bio.children[0].children[0].children) {
-        movie.children[0].children[0].innerHTML = Data.results[i].title;
-        movie.children[0].children[1].src = Data.results[i].image_url;
-        movie.children[0].children[1].setAttribute("data", Data.results[i].url);
-        i = i + 1;
+        if (i == 0) {
+          i = i + 1;
+          continue
+        } else {
+          movie.children[0].children[0].innerHTML = Data.results[i-1].title;
+          movie.children[0].children[1].src = Data.results[i-1].image_url;
+          movie.children[0].children[1].setAttribute("data", Data.results[i-1].url);
+          i = i + 1;
+        }
+        
       }
     } else if (cat == "Adventure") {
       const aventure = document.getElementById(`${id}`);
@@ -49,9 +61,14 @@ function createAMovie(id = "") {
       let Data = await response.json();
       let i = 0;
       for (let movie of aventure.children[0].children[0].children) {
-        movie.children[0].children[0].innerHTML = Data.results[i].title;
-        movie.children[0].children[1].src = Data.results[i].image_url;
-        movie.children[0].children[1].setAttribute("data", Data.results[i].url);
+        if (i == 0) {
+          i = i + 1;
+          continue
+        } else {
+          movie.children[0].children[0].innerHTML = Data.results[i-1].title;
+          movie.children[0].children[1].src = Data.results[i-1].image_url;
+          movie.children[0].children[1].setAttribute("data", Data.results[i-1].url);
+        }
         i = i + 1;
       }
     } else if (cat == "War") {
@@ -62,9 +79,14 @@ function createAMovie(id = "") {
       let Data = await response.json();
       let i = 0;
       for (let movie of war.children[0].children[0].children) {
-        movie.children[0].children[0].innerHTML = Data.results[i].title;
-        movie.children[0].children[1].src = Data.results[i].image_url;
-        movie.children[0].children[1].setAttribute("data", Data.results[i].url);
+        if (i == 0) {
+          i = i + 1;
+          continue
+        } else {
+          movie.children[0].children[0].innerHTML = Data.results[i-1].title;
+          movie.children[0].children[1].src = Data.results[i-1].image_url;
+          movie.children[0].children[1].setAttribute("data", Data.results[i-1].url);
+        }
         i = i + 1;
       }
     }
